@@ -2,13 +2,15 @@ import static java.lang.Integer.parseInt;
 
 public class Main {
     public static void main(String[] args) {
-        String str = args[0];
-        NumberToWord word = new NumberToWord(str);
-        if (parseInt(args[0]) <= 0) {
+        NumberToWord word = new NumberToWord(args[0]);
+        int num = parseInt(args[0]);
+        if (num <= 0 || num <= 9) {
             word.ones();
-        } else if (parseInt(args[0]) <= 11 && parseInt(args[0]) <= 19) {
+        } else if (num == 10) {
+            word.tens();
+        } else if (num <= 11 || num <= 19) {
             word.teens();
-        } else if (parseInt(args[0]) <= 20 || parseInt(args[0]) <= 99) {
+        } else if (num >= 20 || num <= 99) {
             word.tens();
             word.ones();
         } else {
