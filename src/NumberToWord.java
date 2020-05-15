@@ -7,74 +7,79 @@ public class NumberToWord {
         this.num = num;
     }
 
-    public void ones() {
+    public String ones() {
         int numb = parseInt(num) % 10;
-        if (numb == 0) {
-            System.out.print("ноль");
-        } else if (numb == 1) {
-            System.out.print("один");
-        } else if (numb == 2) {
-            System.out.print("два");
-        } else if (numb == 3) {
-            System.out.print("три");
-        } else if (numb == 4) {
-            System.out.print("четыре");
-        } else if (numb == 5) {
-            System.out.print("пять");
-        } else if (numb == 6) {
-            System.out.print("шесть");
-        } else if (numb == 7) {
-            System.out.print("семь");
-        } else if (numb == 8) {
-            System.out.print("восемь");
-        } else if (numb == 9) {
-            System.out.print("девять");
+        switch (numb) {
+            case 1:
+                return "один";
+            case 2:
+                return "два";
+            case 3:
+                return "три";
+            case 4:
+                return "четыре";
+            case 5:
+                return "пять";
+            case 6:
+                return "шесть";
+            case 7:
+                return "семь";
+            case 8:
+                return "восемь";
+            case 9:
+                return "девять";
+            default:
+                return "ноль";
         }
     }
 
-    public void teens() {
+    public String teens() {
         int numb = parseInt(num);
-        if (numb == 11) {
-            System.out.print("одинадцать ");
-        } else if (numb == 12) {
-            System.out.print("двенадцать ");
-        } else if (numb == 13) {
-            System.out.print("тринадцать ");
-        } else if (numb == 14) {
-            System.out.print("четырнадцать ");
-        } else if (numb == 15) {
-            System.out.print("пятнадцать ");
-        } else if (numb == 16) {
-            System.out.print("шестнадцать ");
-        } else if (numb == 17) {
-            System.out.print("семнадцать ");
-        } else if (numb == 18) {
-            System.out.print("восемнадцать ");
-        } else if (numb == 19) {
-            System.out.print("девятнадцать ");
+        switch (numb) {
+            case 11:
+                return "одинадцать ";
+            case 12:
+                return "двенадцать ";
+            case 13:
+                return "тринадцать ";
+            case 14:
+                return "четырнадцать ";
+            case 15:
+                return "пятнадцать ";
+            case 16:
+                return "шестнадцать ";
+            case 17:
+                return "семнадцать ";
+            case 18:
+                return "восемнадцать ";
+            case 19:
+                return "девятнадцать ";
         }
+        return "";
     }
 
-    public void tens() {
+    public String tens() {
         int numb = parseInt(num) / 10;
-        if (numb == 1) {
-            System.out.print("десять ");
-        } else if (numb == 2) {
-            System.out.print("двадцать ");
-        } else if (numb == 3) {
-            System.out.print("тридцать ");
-        } else if (numb == 4) {
-            System.out.print("сорок ");
-        } else if (numb == 5) {
-            System.out.print("пятдесят ");
-        } else if (numb == 6) {
-            System.out.print("шестьдесят ");
-        } else if (numb == 7) {
-            System.out.print("семдесят ");
-        } else if (numb == 8) {
-            System.out.print("восемдесят ");
-        } else if (numb == 9) {
-            System.out.print("девяносто ");
+        switch (numb) {
+            case 1:
+                return "десять ";
+            case 2:
+                return "двадцать";
+            case 3:
+                return "тридцать";
+            case 4:
+                return "сорок";
+            case 5:
+                return "пятдесят";
+            case 6:
+                return "шестьдесят";
+            case 7:
+                return "семдесят";
+            case 8:
+                return "восемдесят";
+            case 9:
+                return "девяносто";
         }
+        return "";
     }
 }
